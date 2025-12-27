@@ -32,8 +32,8 @@ public:
                 occupied.pop();
             }
             long long int meeting_end_time = 1ll*meetings[i][1];
-            if(empty_rooms.size() == 0){
-                long long int mini = 1ll*occupied.top().first;
+            if(empty_rooms.size() == 0){                                                        // only vacate the single room and not all rooms ending at latest time
+                long long int mini = 1ll*occupied.top().first; 
                 empty_rooms.push(occupied.top().second);
                 occupied.pop();
                 meeting_end_time = 1ll*mini + 1ll*(1ll*meetings[i][1] - 1ll*meetings[i][0]);
