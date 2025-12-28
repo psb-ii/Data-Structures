@@ -25,7 +25,7 @@ public:
                 left = mat[max_ind][mid-1];
             if(mid + 1 < mat[0].size())
                 right = mat[max_ind][mid+1];
-            if(element > left && element > right){
+            if(element > left && element > right){  // only check right and left because this element is maximum in the column
                 location.insert(location.end(),{max_ind,mid});
                 return location;
             }
