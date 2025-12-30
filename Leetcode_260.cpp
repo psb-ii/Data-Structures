@@ -13,7 +13,7 @@ private:
         }
         // cout <<setbit <<" "<<notset<<endl;
         vector<int> res{setbit, notset};
-        sort(res.begin(), res.end());
+        sort(res.begin(), res.end()); 
         return res;
     }
 public:
