@@ -13,10 +13,10 @@ public:
         vector<bool>isPrimes(n + 1,true);
         isPrimes[1] = false;
         vector<int>prime;
-        for(int i = 2; i <= n; i = i + 1){
+        for(int i = 2; i*i <= n; i = i + 1){
             if(isPrimes[i]){
                 prime.push_back(i);
-                for(int j = 2*i; j <= n; j +=i){
+                for(int j = i*i; j <= n; j +=i){
                     isPrimes[j] = false;
                 }
             }
